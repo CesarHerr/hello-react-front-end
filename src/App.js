@@ -1,8 +1,19 @@
-import './App.css';
+import React from 'react';
+import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+import Greeting from './components/Greeting';
+
+const router = createBrowserRouter([
+  {
+    path: '/',
+    element: <Greeting />,
+  },
+]);
 
 function App() {
   return (
-    <h1>Hello</h1>
+    <React.StrictMode>
+      <RouterProvider router={router} />
+    </React.StrictMode>
   );
 }
 
